@@ -1,0 +1,39 @@
+/* Container */
+.container {
+}
+
+/* AppBar .appBar*/
+.navbar__container {
+  border-radius: 15px;
+  /* margin: 30px 0px; */
+  margin: 30px auto;
+  width: 60vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0px 3px 8px rgb(100, 100, 100);
+}
+
+/* Typography  .heading*/
+.app__title {
+  color: rgba(0, 183, 255, 1);
+}
+
+.app__image {
+  margin-left: 15px;
+  height: 60px;
+}
+
+.form-posts__container {
+  /* display: flex;
+  flex-direction: row;
+  margin: 30px auto;
+  width: 50vw;
+  justify-content: space-between; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 30px auto;
+  width: 60vw;
+}

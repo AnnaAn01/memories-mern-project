@@ -1,0 +1,19 @@
+.form__paper {
+  /* change this */
+  padding: 0;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.form__fileInput {
+  width: 97%;
+  margin: 10px 0;
+}
+
+.form__buttonSubmit {
+  margin-bottom: 10px;
+}
