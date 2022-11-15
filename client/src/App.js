@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import memories from "./images/memories.png";
 import Form from "./components/Form/Form";
 import Posts from "./components/Posts/Posts";
 import "./App.css";
+import { useDispatch } from "react-redux";
+import { getPosts } from "./actions/posts";
 
 const App = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getPosts());
+  }, [dispatch]);
+
   return (
     <div className="container">
       <nav className="navbar__container">

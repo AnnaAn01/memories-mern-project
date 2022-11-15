@@ -7,11 +7,11 @@ import postRoutes from "./routes/posts.js";
 
 const app = express();
 
-app.use("/posts", postRoutes);
-
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
+
+app.use("/posts", postRoutes);
 
 const CONNECTION_URL =
   "mongodb+srv://annaan01:annaan01123456@cluster0.dzbiybx.mongodb.net/?retryWrites=true&w=majority";
@@ -19,14 +19,15 @@ const PORT = process.env.PORT || 5000;
 
 // makes sure that we don't get any wornings in the console
 mongoose
-  .connect(CONNECTION_URL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() =>
-    app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
+    app.listen(PORT, () =>
+      console.log(`Server Running on Port: http://localhost:${PORT}`)
+    )
   )
-  .catch((error) => console.log(error.message));
+  .catch((error) => console.log(`${error} did not connect`));
+
+// mongoose.set("useFindAndModify", false);
 // makes sure that we don't get any wornings in the console
 // depricated now
 // mongoose.set("useFindAndModify", false);
