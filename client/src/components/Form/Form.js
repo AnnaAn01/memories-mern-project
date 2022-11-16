@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./Form.css";
 import FileBase from "react-file-base64";
+import { useDispatch } from "react-redux";
+import { createPost } from "../../actions/posts";
 
 const Form = () => {
   const [postData, setPostData] = useState({
@@ -10,7 +12,12 @@ const Form = () => {
     tags: "",
     selectedFile: "",
   });
-  const handleSubmit = () => {};
+  const dispatch = useDispatch();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    dispatch(createPost(postData));
+  };
 
   const clear = () => {};
 
@@ -57,7 +64,7 @@ const Form = () => {
               Message
             </label>
             <input
-              className="form__input"
+              className="form__input form__input-message"
               type="text"
               name="message"
               value={postData.message}

@@ -6,7 +6,7 @@
 .navbar__container {
   border-radius: 15px;
   /* margin: 30px 0px; */
-  margin: 30px auto;
+  margin: 30px auto 30px auto;
   width: 60vw;
   display: flex;
   flex-direction: row;
@@ -33,7 +33,15 @@
   width: 50vw;
   justify-content: space-between; */
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin: 30px auto;
+  grid-template-columns: 2fr 1fr;
+  margin: 0 auto;
   width: 60vw;
+  /* background-color: green; */
+  /* background-color: red; */
+}
+
+.container__grid-form {
+  /* justify-content: flex-end;
+  align-items: flex-end; */
+  /* background-color: red; */
 }
