@@ -8,9 +8,17 @@ const Posts = () => {
   console.log(posts);
   return (
     <>
-      <h1>POSTS</h1>
-      <Post />
-      <Post />
+      {!posts.length ? (
+        <div className="loader"></div>
+      ) : (
+        <div className="posts__grid-container">
+          {posts.map((post, index) => (
+            <div className="posts__grid" key={index}>
+              <Post post={post} />
+            </div>
+          ))}
+        </div>
+      )}
     </>
   );
 };
