@@ -28,21 +28,11 @@
 }
 
 .form-posts__container {
-  /* display: flex;
-  flex-direction: row;
-  margin: 30px auto;
-  width: 50vw;
-  justify-content: space-between; */
   display: grid;
   grid-template-columns: 2fr 1fr;
   margin: 0 auto;
   width: 60vw;
-  /* background-color: green; */
-  /* background-color: red; */
 }
 
 .container__grid-form {
-  /* justify-content: flex-end;
-  align-items: flex-end; */
-  /* background-color: red; */
 }
