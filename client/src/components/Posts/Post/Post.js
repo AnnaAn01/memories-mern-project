@@ -8,7 +8,7 @@ import {
   FiMoreHorizontal,
 } from "react-icons/fi";
 
-const Post = ({ post }) => {
+const Post = ({ post, setCurrentId }) => {
   return (
     <div className="post__card">
       <div className="post__image-wrapper">
@@ -22,7 +22,7 @@ const Post = ({ post }) => {
         <div className="post__title">{post.title}</div>
       </div>
       <div className="post__overlay2">
-        <button className="post__button" onClick={() => {}}>
+        <button className="post__button" onClick={() => setCurrentId(post._id)}>
           <FiMoreHorizontal />
         </button>
       </div>

@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import Post from "./Post/Post";
 import "./Posts.css";
 
-const Posts = () => {
+const Posts = ({ setCurrentId }) => {
   const posts = useSelector((state) => state.posts);
   console.log(posts);
   return (
@@ -14,7 +14,7 @@ const Posts = () => {
         <div className="posts__grid-container">
           {posts.map((post, index) => (
             <div className="posts__grid" key={index}>
-              <Post post={post} />
+              <Post post={post} setCurrentId={setCurrentId} />
             </div>
           ))}
         </div>

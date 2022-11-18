@@ -7,6 +7,7 @@ import { useDispatch } from "react-redux";
 import { getPosts } from "./actions/posts";
 
 const App = () => {
+  const [currentId, setCurrentId] = useState(0);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -21,10 +22,10 @@ const App = () => {
       </nav>
       <div className="form-posts__container">
         <div className="container__grid-posts">
-          <Posts />
+          <Posts setCurrentId={setCurrentId} />
         </div>
         <div className="container__grid-form">
-          <Form />
+          <Form currentId={currentId} setCurrentId={setCurrentId} />
         </div>
       </div>
     </div>
