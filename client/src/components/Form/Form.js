@@ -4,6 +4,8 @@ import FileBase from "react-file-base64";
 import { useDispatch } from "react-redux";
 import { createPost } from "../../actions/posts";
 
+// get the current id of the post we're on
+
 const Form = () => {
   const [postData, setPostData] = useState({
     creator: "",

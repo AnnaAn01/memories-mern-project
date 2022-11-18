@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import memories from "./images/memories.png";
 import Form from "./components/Form/Form";
 import Posts from "./components/Posts/Posts";
