@@ -91,23 +91,20 @@
 .post__date-time-posted {
   display: flex;
   font-size: 1rem;
-  /* background-color: green; */
 }
 
 .post__hashtag {
 }
 
 .post__title {
-  /* display: inline; */
   display: flex;
   position: relative;
-  /* padding: 0 16px; */
+
   font-size: 2rem;
-  /* color: white; */
+
   width: 100%;
 
   word-break: break-all;
-  /* background-color: green; */
 }
 
 .post__message {
