@@ -29,19 +29,29 @@ const Form = ({ currentId, setCurrentId }) => {
 
     if (currentId === 0) {
       dispatch(createPost(postData));
-      clear();
     } else {
       dispatch(updatePost(currentId, postData));
-      clear();
     }
+    clear();
   };
 
-  const clear = () => {};
+  const clear = () => {
+    setCurrentId(null);
+    setPostData({
+      creator: "",
+      title: "",
+      message: "",
+      tags: "",
+      selectedFile: "",
+    });
+  };
 
   return (
     <>
       <div className="form__paper">
-        <h6 className="form__title">Creating a Memory</h6>
+        <h6 className="form__title">
+          {currentId ? "Editing" : "Creating"} a Memory
+        </h6>
         <form
           autoComplete="off"
           noValidate

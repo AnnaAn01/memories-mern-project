@@ -46,10 +46,12 @@
 }
 
 .post__overlay {
+  /* width: 100%; */
   position: absolute;
   top: 20px;
   left: 20px;
   color: white;
+  overflow-wrap: break-word;
 }
 .post__overlay2 {
   position: absolute;
@@ -96,11 +98,16 @@
 }
 
 .post__title {
+  /* display: inline; */
   display: flex;
   position: relative;
   /* padding: 0 16px; */
   font-size: 2rem;
-  color: white;
+  /* color: white; */
+  width: 100%;
+
+  word-break: break-all;
+  /* background-color: green; */
 }
 
 .post__message {

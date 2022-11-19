@@ -19,7 +19,6 @@ const Post = ({ post, setCurrentId }) => {
         <div className="post__date-time-posted">
           {moment(post.createdAt).fromNow()}
         </div>
-        <div className="post__title">{post.title}</div>
       </div>
       <div className="post__overlay2">
         <button className="post__button" onClick={() => setCurrentId(post._id)}>
@@ -30,6 +29,7 @@ const Post = ({ post, setCurrentId }) => {
         <div className="post__hashtag">
           {post.tags.map((tag) => `#${tag} `)}
         </div>
+        <div className="post__title">{post.title}</div>
         <div className="post__cardcontent">
           <h5 className="post__message">{post.message}</h5>
         </div>
