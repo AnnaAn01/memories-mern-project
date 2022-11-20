@@ -119,6 +119,7 @@
 .post__button-thumb-delete {
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 
 .thumbup,

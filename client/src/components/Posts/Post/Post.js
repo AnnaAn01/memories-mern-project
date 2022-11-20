@@ -7,8 +7,12 @@ import {
   FiTrash2,
   FiMoreHorizontal,
 } from "react-icons/fi";
+import { useDispatch } from "react-redux";
+
+import { deletePost } from "../../../actions/posts";
 
 const Post = ({ post, setCurrentId }) => {
+  const dispatch = useDispatch();
   return (
     <div className="post__card">
       <div className="post__image-wrapper">
@@ -39,7 +43,10 @@ const Post = ({ post, setCurrentId }) => {
             Like &nbsp;
             {post.likeCount}
           </button>
-          <button className="post__button-thumb-delete" onClick={() => {}}>
+          <button
+            className="post__button-thumb-delete"
+            onClick={() => dispatch(deletePost(post._id))}
+          >
             <FiTrash2 className="delete" />
             Delete
           </button>
