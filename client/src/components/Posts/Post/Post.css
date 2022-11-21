@@ -71,14 +71,12 @@
   justify-content: space-between;
   margin: 20px 10px;
   min-height: 8rem;
-  /* background-color: red; */
 }
 
 .post__cardactions {
   padding: 0;
   display: flex;
   justify-content: space-between;
-  /* background-color: yellow; */
 }
 
 .post__button {
