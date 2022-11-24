@@ -8,7 +8,9 @@ const reducers = (posts = [], action) => {
       return action.payload;
     case "CREATE":
       return [...posts, action.payload];
+    // putting two cases below each other will do the same thing for both
     case "UPDATE":
+    case "LIKE":
       return posts.map((post) =>
         post._id === action.payload._id ? action.payload : post
       );

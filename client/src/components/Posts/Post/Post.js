@@ -9,7 +9,7 @@ import {
 } from "react-icons/fi";
 import { useDispatch } from "react-redux";
 
-import { deletePost } from "../../../actions/posts";
+import { deletePost, likePost } from "../../../actions/posts";
 
 const Post = ({ post, setCurrentId }) => {
   const dispatch = useDispatch();
@@ -38,7 +38,10 @@ const Post = ({ post, setCurrentId }) => {
           <h5 className="post__message">{post.message}</h5>
         </div>
         <div className="post__cardactions">
-          <button className="post__button-thumb-delete" onClick={() => {}}>
+          <button
+            className="post__button-thumb-delete"
+            onClick={() => dispatch(likePost(post._id))}
+          >
             <FiThumbsUp className="thumbup" />
             Like &nbsp;
             {post.likeCount}
