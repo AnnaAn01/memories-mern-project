@@ -16,16 +16,18 @@ const App = () => {
 
   return (
     <div className="container">
-      <nav className="navbar__container">
-        <h2 className="app__title">Memories</h2>
-        <img src={memories} alt="memories" className="app__image" />
-      </nav>
-      <div className="form-posts__container">
-        <div className="container__grid-posts">
-          <Posts setCurrentId={setCurrentId} />
-        </div>
-        <div className="container__grid-form">
-          <Form currentId={currentId} setCurrentId={setCurrentId} />
+      <div className="app_wrapper">
+        <nav className="navbar__container">
+          <h2 className="app__title">Memories</h2>
+          <img src={memories} alt="memories" className="app__image" />
+        </nav>
+        <div className="form-posts__container">
+          <div className="container__grid-posts">
+            <Posts setCurrentId={setCurrentId} />
+          </div>
+          <div className="container__grid-form">
+            <Form currentId={currentId} setCurrentId={setCurrentId} />
+          </div>
         </div>
       </div>
     </div>
