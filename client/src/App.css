@@ -39,7 +39,8 @@
 
 @media only screen and (max-width: 1100px) {
   .form-posts__container {
-    display: grid;
+    display: flex;
+    flex-direction: column-reverse;
     grid-template-columns: 1fr;
     /* background-color: yellow; */
     justify-content: center;
